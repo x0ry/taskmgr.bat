@@ -1,0 +1,1 @@
+powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -NoExit -Command $q=[char]34; Get-Process | Where-Object { $_.MainWindowTitle -and $_.ProcessName -notmatch ($q+''explorer|powershell''+$q) } | Stop-Process -Force' -Verb RunAs"
